@@ -2,7 +2,6 @@ services:
   dnsserver:
     build: dnsserver
     hostname: dnsserver
-    
     ports:
       - 10.24.0.100:53:53
     volumes:

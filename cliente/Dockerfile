@@ -9,7 +9,4 @@ RUN apt update  && apt install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-#######
-### Outra liña por aqui nova
-RUN mkdir -p /kk
 CMD ["tail", "-f", "/dev/null"]

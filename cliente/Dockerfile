@@ -10,4 +10,6 @@ RUN apt update  && apt install -y \
 
 
 #######
+### Outra liña por aqui nova
+RUN mkdir -p /kk
 CMD ["tail", "-f", "/dev/null"]

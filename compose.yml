@@ -1,25 +1,26 @@
 services:
   dnsserver:
-    build: dnsserver
+    build: dns
     hostname: dnsserver
-    #ports:
-      #- 10.26.0.35:53:53    #So na rede principal
+    command: -g4
     volumes:
-      - ./dnsserver/named.conf.options:/etc/bind/named.conf.options
+      - ./dns/named.conf.options:/etc/bind/named.conf.options
+      - ./dns/named.conf.local:/etc/bind/named.conf.local
+      - ./dns/db.starwars.lan:/etc/bind/zones/db.starwars.lan
+      - ./dns/db.172.25.0:/etc/bind/zones/db.172.25.0
     networks:
       rededns:
         ipv4_address: 172.25.0.11
-  cliente:
+  cliente1:
     build: cliente
     hostname: cliente1
+    dns: 172.25.0.11
     networks:
       rededns:
-        ipv4_address: 172.25.0.100
-    dns: 172.25.0.11
+        ipv4_address: 172.25.0.111
+
 networks:
   rededns:
     ipam:
       config:
-        - subnet: 172.25.0.0/16
-
-
+        - subnet: 172.25.0.0/24

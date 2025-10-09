@@ -1,0 +1,12 @@
+zone "starwars.lan" {
+    type master;
+    file "/etc/bind/zones/db.starwars.lan";
+};
+
+
+zone "0.25.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.172.25.0";
+};
+
+

@@ -1,0 +1,29 @@
+$TTL 86400
+@   IN  SOA darthvader.starwars.lan. admin.starwars.lan. (
+        2025100601 ; Serial
+        3600       ; Refresh
+        1800       ; Retry
+        604800     ; Expire
+        86400      ; Negative Cache TTL
+)
+;
+;Servidores de nombres
+@    IN  NS  darthvader.starwars.lan.
+@    IN  NS  darthsidious.starwars.lan.
+
+;Hosts
+darthvader    IN  A   172.25.0.10
+darthsidious  IN  A   172.25.0.11
+luke          IN  A   172.25.0.22
+yoda          IN  A   172.25.0.24
+yoda          IN  A   172.25.0.25
+c3p0          IN  A   172.25.0.26
+skywalker     IN  A   172.25.0.101
+skywalker     IN  A   172.25.0.111
+
+;Alias
+palpatine     IN  CNAME darthsidious.starwars.lan.
+
+@             IN  MX 10 c3p0.starwars.lan.
+
+lenda         IN  TXT "Que a forza te acompanhe"

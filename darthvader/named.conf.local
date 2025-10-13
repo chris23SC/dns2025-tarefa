@@ -1,0 +1,14 @@
+zone "starwars.lan" {
+    type master;
+    file "/etc/bind/zones/db.starwars.lan";
+    allow-transfer { 172.25.0.11 };
+};
+
+
+zone "0.25.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.172.25.0";
+    allow-transfer { 172.25.0.11 };
+};
+
+

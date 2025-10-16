@@ -1,20 +1,31 @@
 services:
-  dnsserver:
-    build: dns
-    hostname: dnsserver
+  darthvader:
+    build: dnsserver
+    hostname: darthvader
     command: -g4
     volumes:
-      - ./dns/named.conf.options:/etc/bind/named.conf.options
-      - ./dns/named.conf.local:/etc/bind/named.conf.local
-      - ./dns/db.starwars.lan:/etc/bind/zones/db.starwars.lan
-      - ./dns/db.172.25.0:/etc/bind/zones/db.172.25.0
+      - ./darthvader/named.conf.options:/etc/bind/named.conf.options
+      - ./darthvader/named.conf.local:/etc/bind/named.conf.local
+      - ./darthvader/db.starwars.lan:/etc/bind/zones/db.starwars.lan
+      - ./darthvader/db.172.25.0:/etc/bind/zones/db.172.25.0
+    networks:
+      rededns:
+        ipv4_address: 172.25.0.10
+  darthsidious:
+    build: dnsserver
+    hostname: darthsidious
+    volumes:
+      - ./darthsidious/named.conf.options:/etc/bind/named.conf.options
+      - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
     networks:
       rededns:
         ipv4_address: 172.25.0.11
   cliente1:
     build: cliente
     hostname: cliente1
-    dns: 172.25.0.11
+    dns: 
+    - 172.25.0.10
+    - 172.25.0.11
     networks:
       rededns:
         ipv4_address: 172.25.0.111

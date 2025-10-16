@@ -8,7 +8,7 @@ $TTL 86400
 )
 ;
 ;Servidores de nombres
-@    IN  NS  darthvader.starwars.lan.
+@    IN  NS  delegado.starwars.lan.
 @    IN  NS  darthsidious.starwars.lan.
 
 ;Hosts
@@ -29,10 +29,4 @@ palpatine     IN  CNAME darthsidious.starwars.lan.
 
 ; Texto
 lenda         IN  TXT "Que a forza te acompanhe"
-
-; Falta algo acá, los hosts del imperio de mierda creo
-
-$ORIGIN imperio.starwars.lan
-@       IN      NS      delegau
-delegau IN      A       172.25.0.50
 

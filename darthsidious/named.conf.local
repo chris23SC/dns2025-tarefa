@@ -1,12 +1,23 @@
+key "llave-starwars"{
+    algorithm hmac-sha256;
+    secret "";
+}
+
+server 172.25.0.10 {
+    keys{"llave-starwars;};
+}
+
 zone "starwars.lan" {
-    type master;
-    file "/etc/bind/zones/db.starwars.lan";
+    type slave;
+    file "db.starwars.lan";
+    masters {172.25.0.10;};
 };
 
 
 zone "0.25.172.in-addr.arpa" {
-    type master;
+    type slave;
     file "/etc/bind/zones/db.172.25.0";
+    masters {172.25.0.10;};
 };
 
 

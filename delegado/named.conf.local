@@ -1,0 +1,18 @@
+zone "imperio.starwars.lan" {
+    type master;
+    file "/etc/bind/zones/db.imperio.starwars.lan";
+};
+
+
+zone "imperio.starwars.lan" {
+    type forward;
+    forwarders {
+        172.25.0.10;
+        };
+};
+
+; OJO Puede que este sea el único que está bien
+
+
+
+

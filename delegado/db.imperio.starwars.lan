@@ -7,26 +7,12 @@ $TTL 86400
         86400      ; Negative Cache TTL
 )
 ;
+
 ;Servidores de nombres
-@    IN  NS  delegado.starwars.lan.
-@    IN  NS  darthsidious.starwars.lan.
+@    IN  NS  delegado.imperio.starwars.lan.
 
 ;Hosts
-darthvader    IN  A   172.25.0.10
-darthsidious  IN  A   172.25.0.11
-luke          IN  A   172.25.0.22
-yoda          IN  A   172.25.0.24
-yoda          IN  A   172.25.0.25
-c3p0          IN  A   172.25.0.26
-skywalker     IN  A   172.25.0.101
-skywalker     IN  A   172.25.0.111
-
-;Alias
-palpatine     IN  CNAME darthsidious.starwars.lan.
-
-; Servidor de correo (MX)
-@             IN  MX 10 c3p0.starwars.lan.
-
-; Texto
-lenda         IN  TXT "Que a forza te acompanhe"
+delegado        IN      A       172.25.0.50
+tsuichoi        IN      A       172.25.0.225
+bultarswan      IN      A       172.25.0.226
 

@@ -14,12 +14,27 @@ services:
   darthsidious:
     build: dnsserver
     hostname: darthsidious
+    depends_on:
+      - darthvader
     volumes:
       - ./darthsidious/named.conf.options:/etc/bind/named.conf.options
       - ./darthsidious/named.conf.local:/etc/bind/named.conf.local
     networks:
       rededns:
         ipv4_address: 172.25.0.11
+    
+  delegado:
+    build: dnsserver
+    hostname: delegado
+    depends_on:
+      - darthvader
+    volumes:
+      - ./delegado/db.imperio.starwars.lan:/etc/bind/zones/db.imperio.starwars.lan
+      - ./delegado/named.conf.options:/etc/bind/named.conf.options
+      - ./delegado/named.conf.local:/etc/bind/named.conf.local
+    networks:
+      rededns:
+        ipv4_address: 172.25.0.50
   cliente1:
     build: cliente
     hostname: cliente1

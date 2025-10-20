@@ -7,19 +7,20 @@ $TTL 86400
         86400      ; Negative Cache TTL
 )
 ;
-;Servidores de nombres
+;Servidores de nombres (primarios)
 @    IN  NS  darthvader.starwars.lan.
 @    IN  NS  darthsidious.starwars.lan.
 
 ;Hosts
-darthvader    IN  A   172.25.0.10
-darthsidious  IN  A   172.25.0.11
-luke          IN  A   172.25.0.22
-yoda          IN  A   172.25.0.24
-yoda          IN  A   172.25.0.25
-c3p0          IN  A   172.25.0.26
-skywalker     IN  A   172.25.0.101
-skywalker     IN  A   172.25.0.111
+darthvader      IN      A       172.25.0.10
+darthsidious    IN      A       172.25.0.11
+luke            IN      A       172.25.0.22
+yoda            IN      A       172.25.0.24
+yoda            IN      A       172.25.0.25
+c3p0            IN      A       172.25.0.26
+skywalker       IN      A       172.25.0.101
+skywalker       IN      A       172.25.0.111
+leia            IN      A       172.25.0.50
 
 ;Alias
 palpatine     IN  CNAME darthsidious.starwars.lan.
@@ -31,6 +32,11 @@ palpatine     IN  CNAME darthsidious.starwars.lan.
 lenda         IN  TXT "Que a forza te acompanhe"
 
 ; Falta algo acá, los hosts del imperio de mierda creo
+
+
+$ORIGIN anntigarepublica.starwars.lan
+xendor  IN      A       172.25.0.222     
+ardelyn IN      A       172.25.0.223
 
 $ORIGIN imperio.starwars.lan
 @       IN      NS      delegau

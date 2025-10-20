@@ -6,12 +6,13 @@ zone "imperio.starwars.lan" {
 
 zone "imperio.starwars.lan" {
     type forward;
+    forward only:
     forwarders {
         172.25.0.10;
         };
 };
 
-; OJO Puede que este sea el único que está bien
+; OJO Todos los archivos de esta carpeta están ok
 
 
 

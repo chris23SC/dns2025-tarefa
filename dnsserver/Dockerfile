@@ -22,6 +22,6 @@ WORKDIR /var/cache/bind
 RUN sed -i 's/^\s*module(load="imklog")/#module(load="imklog")/' /etc/rsyslog.conf
 RUN mkdir -p /run/named && chmod 775 /run/named && chgrp bind /run/named
 
-CMD ["-4"]
+CMD ["-g","-4"]
 
 ENTRYPOINT ["/dns/entrypoint.sh"]

@@ -3,23 +3,29 @@ options {
     dnssec-validation no;
 };
 
-logging {
-    channel query.log {
-        file "/logs/query.log";
-        // Set the severity to dynamic to see all the debug messages.
-        severity info;
-    };
+// logging {
+//     channel query.log {
+//         file "/logs/query.log";
+//         // Set the severity to dynamic to see all the debug messages.
+//         severity info;
+//     };
 
-    category queries { query.log; };
+//     category queries { query.log; };
 
-	channel log_sistema {
-		syslog;
-		severity dynamic;
-	};
+// 	channel log_sistema {
+// 		syslog;
+// 		severity dynamic;
+// 	};
 
-	categor	y config {
-		log_sistema;
-	};
+// 	categor	y config {
+// 		log_sistema;
+// 	};
 
 
+// };
+
+include "/etc/bind/rndc.key";
+controls {
+    inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
+    inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "rndc-key"; };
 };

@@ -67,6 +67,8 @@ services:
     networks:
       rededns:
         ipv4_address: 192.168.20.110
+    volumes:
+      - ./cliente/rndc.conf:/etc/bind/rndc.conf
     dns: 
     - 192.168.20.10
     - 192.168.20.11

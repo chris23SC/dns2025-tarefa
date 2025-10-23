@@ -1,0 +1,5 @@
+
+zone "." {
+	type primary;
+    file "/etc/bind/db.raiz";
+};

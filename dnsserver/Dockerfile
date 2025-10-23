@@ -17,6 +17,8 @@ EXPOSE 53
 # USER bind
 WORKDIR /var/cache/bind
 
+RUN mkdir -p /run/named && chmod 775 /run/named && chgrp bind /run/named
+
 CMD ["-4"]
 
 ENTRYPOINT ["/dns/entrypoint.sh"]

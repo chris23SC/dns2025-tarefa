@@ -1,0 +1,23 @@
+
+
+server 192.168.20.10 {
+    keys {"chave-starwars";};
+};
+
+
+zone "starwars.lan" {
+	type slave;
+    file "db.starwars.lan";
+    masters {192.168.20.10;};    
+};
+zone "20.168.192.in-addr.arpa" {
+	type slave;
+    file "db.192";
+    masters {192.168.20.10;};
+};
+
+//comentario
+key "chave-starwars" {
+	algorithm hmac-sha256;
+	secret "mPL3X+WRTRhBJ3CvrZ1s20gQAPvP62PLozEKgHAzi24=";
+};

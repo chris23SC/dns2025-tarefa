@@ -1,0 +1,25 @@
+$TTL 86400
+@       IN      SOA     ns.lan. admin.local. (
+                        2025102001 ; Serial
+                        3600       ; Refresh
+                        1800       ; Retry
+                        604800     ; Expire
+                        86400 )    ; Negative Cache TTL
+
+; Servidores de nombres raíz
+@       IN      NS      ns.lan.
+
+; IPs de los servidores raíz simulados
+ns.lan.    IN      A       192.168.20.9
+
+$ORIGIN starwars.lan.
+@             IN      NS      ns1
+ns1    IN      A       192.168.20.10
+
+$ORIGIN test.lan.
+@             IN      NS      ns1
+ns1    IN      A       192.168.20.100
+
+$ORIGIN exemplo.lan.
+@             IN      NS      ns1
+ns1    IN      A       192.168.20.101

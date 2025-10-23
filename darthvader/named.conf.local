@@ -1,0 +1,23 @@
+
+
+zone "starwars.lan" {
+	type master;
+    file "/etc/bind/db.starwars.lan";
+//    allow-transfer { 192.168.20.11; };
+    allow-transfer {key "chave-starwars"; };
+};
+zone "20.168.192.in-addr.arpa" {
+	type master;
+    file "/etc/bind/db.192";
+//    allow-transfer { 192.168.20.11; };
+    allow-transfer {key "chave-starwars"; };
+};
+
+
+key "chave-starwars" {
+	algorithm hmac-sha256;
+	secret "mPL3X+WRTRhBJ3CvrZ1s20gQAPvP62PLozEKgHAzi24=";
+};
+
+
+//comentario

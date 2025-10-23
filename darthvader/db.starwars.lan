@@ -1,0 +1,40 @@
+$TTL 1D
+@       IN      SOA     darthvader.starwars.lan. admin.starwars.lan. (
+                        2025101303  ; Serial (YYYYMMDDnn)
+                        8H          ; Refresh
+                        2H          ; Retry
+                        1W          ; Expire
+                        1D )        ; Minimum TTL
+
+; Servidor de nomes (primario)
+        IN      NS      darthvader.starwars.lan.
+
+        IN      NS      darthsidious.starwars.lan.
+
+; Registros A
+darthvader      IN      A       192.168.20.10
+darthsidious    IN      A       192.168.20.11
+skywalker       IN      A       192.168.20.101
+skywalker       IN      A       192.168.20.111
+luke            IN      A       192.168.20.220
+yoda            IN      A       192.168.20.24
+yoda            IN      A       192.168.20.25
+c3p0            IN      A       192.168.20.26
+leia            IN      A       192.168.20.50
+; Alias (CNAME)
+palpatine       IN      CNAME   darthsidious.starwars.lan.
+
+; Servidor de correo (MX)
+@               IN      MX 10   c3p0.starwars.lan.
+
+; Texto
+lenda           IN      TXT     "Que a forza te acompanhe"
+
+$ORIGIN antigarepublica.starwars.lan.
+
+xendor  IN      A       192.168.20.222
+ardelyn  IN      A       192.168.20.223
+
+$ORIGIN imperio.starwars.lan.
+@           IN      NS      leia.starwars.lan.
+

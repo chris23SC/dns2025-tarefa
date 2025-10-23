@@ -1,0 +1,25 @@
+$TTL 86400
+@       IN      SOA     nsraiz. admin.local. (
+                        2025102001 ; Serial
+                        3600       ; Refresh
+                        1800       ; Retry
+                        604800     ; Expire
+                        86400 )    ; Negative Cache TTL
+
+; Servidores de nombres raíz
+@       IN      NS      nsraiz.
+
+; IPs de los servidores raíz simulados
+nsraiz.    IN      A       192.168.20.8
+
+$ORIGIN lan.
+@           IN      NS      ns.lan.
+ns.lan.    IN      A       192.168.20.9
+
+$ORIGIN com.
+@           IN      NS      ns.com.
+ns.com.    IN      A       192.168.20.90
+
+$ORIGIN es.
+@           IN      NS      ns.es.
+ns.es.    IN      A       192.168.20.99

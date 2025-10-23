@@ -1,0 +1,5 @@
+
+zone "lan" {
+	type primary;
+    file "/etc/bind/db.lan";
+};

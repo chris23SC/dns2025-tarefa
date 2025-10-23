@@ -31,6 +31,7 @@ services:
       - ./darthvader/db.starwars.lan:/etc/bind/db.starwars.lan
       - ./darthvader/db.192:/etc/bind/db.192
       - ./dnsserver/root.hints:/usr/share/dns/root.hints
+      - ./logs:/logs
     networks:
       rededns:
         ipv4_address: 192.168.20.10

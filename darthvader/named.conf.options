@@ -2,3 +2,24 @@ options {
 	directory "/var/cache/bind";
     dnssec-validation no;
 };
+
+logging {
+    channel query.log {
+        file "/logs/query.log";
+        // Set the severity to dynamic to see all the debug messages.
+        severity info;
+    };
+
+    category queries { query.log; };
+
+	channel log_sistema {
+		syslog;
+		severity dynamic;
+	};
+
+	categor	y config {
+		log_sistema;
+	};
+
+
+};

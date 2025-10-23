@@ -1,0 +1,8 @@
+client @0x7000ed639000 192.168.20.11#44357/key chave-starwars (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN SOA -E(0)S (192.168.20.10)
+client @0x7000f6039000 192.168.20.11#39601/key chave-starwars (starwars.lan): query: starwars.lan IN SOA -E(0)S (192.168.20.10)
+client @0x7000f7a47000 192.168.20.11#44037/key chave-starwars (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN AXFR -E(0)ST (192.168.20.10)
+client @0x7000f5047000 192.168.20.11#41187/key chave-starwars (starwars.lan): query: starwars.lan IN AXFR -E(0)ST (192.168.20.10)
+client @0x70cfa8c7d000 192.168.20.11#51453/key chave-starwars (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN SOA -E(0)S (192.168.20.10)
+client @0x70cfb7c47000 192.168.20.11#42387/key chave-starwars (starwars.lan): query: starwars.lan IN SOA -E(0)S (192.168.20.10)
+client @0x70cfa8c7ec00 192.168.20.11#41611/key chave-starwars (starwars.lan): query: starwars.lan IN AXFR -E(0)ST (192.168.20.10)
+client @0x70cfa6247000 192.168.20.11#46331/key chave-starwars (20.168.192.in-addr.arpa): query: 20.168.192.in-addr.arpa IN AXFR -E(0)ST (192.168.20.10)

@@ -1,0 +1,15 @@
+$TTL 1D
+@       IN      SOA     ns1.galaxia.lan. admin.starwars.lan. (
+                        2025101303  ; Serial (YYYYMMDDnn)
+                        8H          ; Refresh
+                        2H          ; Retry
+                        1W          ; Expire
+                        1D )        ; Minimum TTL
+
+; Servidor de nomes (primario)
+        IN      NS      ns1.galaxia.lan.
+
+
+; Registros A
+ns1             IN      A       192.168.20.10
+leia            IN      A       192.168.20.111

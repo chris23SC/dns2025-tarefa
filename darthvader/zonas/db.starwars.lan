@@ -1,0 +1,28 @@
+$TTL 86400	; 1 day
+starwars.lan.		IN SOA	darthvader.starwars.lan. admin.starwars.lan. (
+				2025101304 ; serial
+				28800      ; refresh (8 hours)
+				7200       ; retry (2 hours)
+				604800     ; expire (1 week)
+				86400      ; minimum (1 day)
+				)
+			NS	darthvader.starwars.lan.
+			NS	darthsidious.starwars.lan.
+			MX	10 c3p0.starwars.lan.
+ardelyn.antigarepublica.starwars.lan. A	192.168.20.223
+xendor.antigarepublica.starwars.lan. A 192.168.20.222
+c3p0.starwars.lan.	A	192.168.20.26
+darthsidious.starwars.lan. A	192.168.20.11
+darthvader.starwars.lan. A	192.168.20.10
+$TTL 3600	; 1 hour
+host1.starwars.lan.	A	192.0.2.51
+$TTL 86400	; 1 day
+imperio.starwars.lan.	NS	leia.starwars.lan.
+leia.starwars.lan.	A	192.168.20.50
+lenda.starwars.lan.	TXT	"Que a forza te acompanhe"
+luke.starwars.lan.	A	192.168.20.220
+palpatine.starwars.lan.	CNAME	darthsidious.starwars.lan.
+skywalker.starwars.lan.	A	192.168.20.101
+			A	192.168.20.111
+yoda.starwars.lan.	A	192.168.20.24
+			A	192.168.20.25

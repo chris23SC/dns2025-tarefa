@@ -1,6 +1,7 @@
 options {
 	directory "/var/cache/bind";
     dnssec-validation no;
+    allow-new-zones yes;
 };
 
 logging {
@@ -21,11 +22,17 @@ logging {
 		log_sistema;
 	};
 
+};
 
-// };
+include "/etc/bind/rndc.key";
 
-// include "/etc/bind/rndc.key";
-// controls {
-//     inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
-//     inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "rndc-key"; };
-// };
+key "chave-remota" {
+	algorithm hmac-sha256;
+	secret "I2skYUqTyWyHUweIcD7GNzdpM7A9P5vnfTAVh3fd/8g=";
+};
+
+
+controls {
+    inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
+    inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "chave-remota"; };
+};

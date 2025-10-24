@@ -4,28 +4,28 @@ options {
 };
 
 logging {
-    channel query.log {
+    channel omeulog {
         file "/logs/query.log";
         // Set the severity to dynamic to see all the debug messages.
         severity info;
     };
 
-    category queries { query.log; };
+    category queries { omeulog; };
 
 	channel log_sistema {
 		syslog;
 		severity dynamic;
 	};
 
-	categor	y config {
+	category config {
 		log_sistema;
 	};
 
 
-};
+// };
 
-include "/etc/bind/rndc.key";
-controls {
-    inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
-    inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "rndc-key"; };
-};
+// include "/etc/bind/rndc.key";
+// controls {
+//     inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
+//     inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "rndc-key"; };
+// };

@@ -25,7 +25,7 @@ services:
   darthvader:
     build: dnsserver
     hostname: darthvader
-    command: -f -4
+    command: -g -4
     volumes:
       - ./darthvader/named.conf.options:/etc/bind/named.conf.options
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local

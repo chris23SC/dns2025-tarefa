@@ -31,7 +31,6 @@ key "chave-remota" {
 	secret "I2skYUqTyWyHUweIcD7GNzdpM7A9P5vnfTAVh3fd/8g=";
 };
 
-
 controls {
     inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
     inet 192.168.20.10 port 953 allow { 192.168.20.110; } keys { "chave-remota"; };

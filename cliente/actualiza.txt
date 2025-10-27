@@ -1,5 +1,5 @@
 server 192.168.20.10
 zone starwars.lan
-update add host1.starwars.lan. 3600 A 192.0.2.51
+update add host100.starwars.lan. 3600 A 193.0.2.251
 send
 show

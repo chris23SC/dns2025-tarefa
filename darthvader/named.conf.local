@@ -2,14 +2,14 @@
 
 zone "starwars.lan" {
 	type master;
-    file "zonas/db.starwars.lan";
+    file "db.starwars.lan";
 //    allow-transfer { 192.168.20.11; };
     allow-transfer {key "chave-starwars"; };
     allow-update {key "chave-remota";};
 };
-zone "zonas/20.168.192.in-addr.arpa" {
+zone "20.168.192.in-addr.arpa" {
 	type master;
-    file "zonzas/db.192";
+    file "db.192";
 //    allow-transfer { 192.168.20.11; };
     allow-transfer {key "chave-starwars"; };
     allow-update {key "chave-remota";};

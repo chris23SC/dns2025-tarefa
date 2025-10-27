@@ -1,6 +1,6 @@
 $TTL 86400	; 1 day
 starwars.lan.		IN SOA	darthvader.starwars.lan. admin.starwars.lan. (
-				2025101304 ; serial
+				2025101306 ; serial
 				28800      ; refresh (8 hours)
 				7200       ; retry (2 hours)
 				604800     ; expire (1 week)
@@ -15,9 +15,12 @@ c3p0.starwars.lan.	A	192.168.20.26
 darthsidious.starwars.lan. A	192.168.20.11
 darthvader.starwars.lan. A	192.168.20.10
 $TTL 3600	; 1 hour
-host1.starwars.lan.	A	192.0.2.51
+host100.starwars.lan.	A	192.0.2.151
+			A	192.0.2.251
+			A	193.0.2.251
 $TTL 86400	; 1 day
-imperio.starwars.lan.	NS	leia.starwars.lan.
+imperio.starwars.lan.	NS	nsdelegado.imperio.starwars.lan.
+nsdelegado.imperio.starwars.lan. A 192.168.20.50
 leia.starwars.lan.	A	192.168.20.50
 lenda.starwars.lan.	TXT	"Que a forza te acompanhe"
 luke.starwars.lan.	A	192.168.20.220

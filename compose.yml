@@ -29,7 +29,7 @@ services:
     volumes:
       - ./darthvader/named.conf.options:/etc/bind/named.conf.options
       - ./darthvader/named.conf.local:/etc/bind/named.conf.local
-      - ./darthvader/zonas:/var/cache/bind/zonas
+      - ./darthvader/zonas:/var/cache/bind
       - ./dnsserver/root.hints:/usr/share/dns/root.hints
       - ./logs:/logs
     networks:

@@ -6,3 +6,18 @@ options {
 forwarders {
 	8.8.8.8;
 }
+
+include "/etc/bind/rndc.key";
+
+//Si se quiere controlar en remoto se descomenta este párrafo
+//y la segunda línea del -controls-
+
+key "llave-remota" {
+	algorithm hmac-sha256;
+	secret "";
+}
+
+controls {
+	inet 127.0.0.1 port 953 allow {127.0.0.1; } keys {"rndc-key";};
+	inet 172.25.00.10 port 953 allow {172.25.0.110; } keys {"llave-remota";};
+}
